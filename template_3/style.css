@@ -1,0 +1,329 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.animate-toggle {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes bounceAnim {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounceAnim 0.4s ease;
+}
+
+#typed-text {
+    display: inline-block;
+    font-weight: bold;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+#typed-text.typing {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background: #f0f0f0;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    animation: fadeIn 1s ease-in;
+}
+
+body.dark {
+    background: #1a1a1a;
+    color: #ddd;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #222;
+    color: #a9fb5c;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar nav a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin: 1rem 0;
+    transition: color 0.3s;
+}
+
+.sidebar nav a:hover {
+    color: #fff;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+p,
+a {
+    font-size: 1rem;
+}
+
+a {
+    color: #7b03f3;
+    text-decoration: solid;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #a9fb5c;
+    color: rgb(0, 0, 0);
+    text-decoration: dotted;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.skills .skill {
+    margin-bottom: 1rem;
+}
+
+.skills .bar {
+    height: 10px;
+    background: #cccccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills .bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: #bffc64;
+    width: 0;
+    border-radius: 5px;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.bar.aws::after {
+    animation-name: fillAws;
+    animation-duration: 1.5s;
+}
+
+.bar.node::after {
+    animation-name: fillNode;
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+}
+
+.bar.js::after {
+    animation-name: fillJs;
+    animation-duration: 1.5s;
+    animation-delay: 0.4s;
+}
+
+.bar.react::after {
+    animation-name: fillReact;
+    animation-duration: 1.5s;
+    animation-delay: 0.6s;
+}
+
+.bar.python::after {
+    animation-name: fillPython;
+    animation-duration: 1.5s;
+    animation-delay: 0.8s;
+}
+
+.bar.rest::after {
+    animation-name: fillRest;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+}
+
+.bar.pg::after {
+    animation-name: fillPg;
+    animation-duration: 1.5s;
+    animation-delay: 1.2s;
+}
+
+.bar.git::after {
+    animation-name: fillGit;
+    animation-duration: 1.5s;
+    animation-delay: 1.4s;
+}
+
+@keyframes fillAws {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 97%;
+    }
+}
+
+@keyframes fillNode {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes fillJs {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes fillReact {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 69%;
+    }
+}
+
+@keyframes fillPython {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes fillRest {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes fillPg {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 93%;
+    }
+}
+
+@keyframes fillGit {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sidebar nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}

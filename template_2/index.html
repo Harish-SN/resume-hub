@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="dog.png" />
+    <title>Harish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header class="navbar glass">
+            <div class="brand">Cloud Engineer</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <label class="toggle">
+                <input type="checkbox" id="theme-toggle" />
+                <span class="thumb">
+                    <i class="fa-solid fa-sun sun"></i>
+                    <i class="fa-solid fa-moon moon"></i>
+                </span>
+            </label>
+        </header>
+
+        <section id="home" class="hero">
+            <h1>Hello, I’m <span>Harish</span></h1>
+            <p class="tagline typed"></p>
+
+            <div class="molebox glass">
+                <div class="toprow">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+                <div class="midrow">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+                <div class="botrow">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+
+                <p class="meters">
+                    Score: <span id="hits">0</span>
+                    Misses: <span id="miss">0</span>
+                </p>
+                <button id="startBtn">Play</button>
+                <button id="restartBtn" class="hide">Play again</button>
+            </div>
+
+            <div id="overlay" class="overlay hide">
+                <img src="dog.png" class="zoomdog" alt="Dog" />
+            </div>
+            <audio id="bark" src="bark.mp3" preload="auto"></audio>
+            <a href="#skills" class="cta">
+                See My Work <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </section>
+
+        <section id="skills" class="block glass centre">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Cloud</h3>
+                    <div class="tags">
+                        <span class="tag" style="--p:0.95">AWS</span>
+                        <span class="tag" style="--p:0.90">AWS CLI &amp; SDK</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>DevOps &amp; Infra</h3>
+                    <div class="tags">
+                        <span class="tag" style="--p:0.88">Docker</span>
+                        <span class="tag" style="--p:0.87">Kubernetes</span>
+                        <span class="tag" style="--p:0.82">CI/CD Pipelines</span>
+                        <span class="tag" style="--p:0.80">Nginx</span>
+                        <span class="tag" style="--p:0.79">PM2</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Backend</h3>
+                    <div class="tags">
+                        <span class="tag" style="--p:0.85">Node.js</span>
+                        <span class="tag" style="--p:0.84">REST &amp; HTTP APIs</span>
+                        <span class="tag" style="--p:0.78">Python</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Frontend</h3>
+                    <div class="tags">
+                        <span class="tag" style="--p:0.89">JavaScript</span>
+                        <span class="tag" style="--p:0.80">React</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Monitoring</h3>
+                    <div class="tags">
+                        <span class="tag" style="--p:0.75">Prometheus</span>
+                        <span class="tag" style="--p:0.75">Grafana</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Version Control</h3>
+                    <div class="tags">
+                        <span class="tag" style="--p:0.90">Git &amp; Version Control</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="block glass centre">
+            <h2>CERTIFICATES</h2>
+            <ul class="timeline centre-tl">
+                <li><span>AWS Certified Solutions Architect – Associate</span></li>
+                <li><span>AWS Certified Developer – Associate</span></li>
+                <li><span>AWS Certified SysOps – Associate</span></li>
+                <li><span>AWS Certified DevOps Pro – Professional</span></li>
+                <li><span>AWS Certified Solutions Architect – Professional</span></li>
+            </ul>
+        </section>
+
+        <section id="projects" class="block glass centre">
+            <h2>Projects</h2>
+            <div class="card-grid">
+                <a class="proj" href="https://github.com/harish/aws-iot-project" target="_blank" rel="noreferrer">
+                    <h3>AWS IoT Home Automation</h3>
+                    <p>Smart-home infrastructure with serverless backend.</p>
+                </a>
+                <a class="proj" href="https://github.com/harish/backend-api" target="_blank" rel="noreferrer">
+                    <h3>Node.js REST API</h3>
+                    <p>Fast, documented API skeleton with JWT auth.</p>
+                </a>
+                <a class="proj" href="https://github.com/harish/portfolio" target="_blank" rel="noreferrer">
+                    <h3>Portfolio Website</h3>
+                    <p>This very page — open-sourced!</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="block glass centre">
+            <h2>CONTACT</h2>
+            <div class="contact-wrap">
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:snharish85@gmail.com">Mail Me</a>
+                </p>
+                <p>
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/Harish-SN" target="_blank" rel="noreferrer">GitHub</a>
+                </p>
+                <p>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/harish-s-553840368/" target="_blank"
+                        rel="noreferrer">LinkedIn</a>
+                </p>
+                <p>
+                    <i class="fa-brands fa-discord"></i>
+                    <a href="https://discordapp.com/users/1341650829115002911" target="_blank"
+                        rel="noreferrer">Discord</a>
+                </p>
+            </div>
+        </section>
+
+        <footer>© 2025 Harish • Built with ❤️</footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
