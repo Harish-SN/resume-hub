@@ -1,6 +1,6 @@
 # resume-hub
 
-A collection of **modern, responsive resume / portfolio templates** built from scratch using **HTML, CSS, and JavaScript**.
+A collection of **modern, responsive resume / portfolio templates** built from scratch
 
 This repository is intended for:
 - Developers creating personal resume websites
